@@ -41,3 +41,21 @@ document.querySelector('#copy-email').addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText('itsmerahulseeram@gmail.com');status.textContent='Email copied';}
  catch{status.textContent='Select the email address above to copy it.';}
 });
+
+const themeToggle = document.querySelector('#theme-toggle');
+function setTheme(theme) {
+ const light = theme === 'light';
+ document.documentElement.dataset.theme = light ? 'light' : 'dark';
+ const action = light ? 'Switch to dark theme' : 'Switch to light theme';
+ themeToggle.setAttribute('aria-label', action);
+ themeToggle.title = action;
+ document.querySelector('#theme-icon').textContent = light ? '☾' : '☀';
+ document.querySelector('#theme-label').textContent = light ? 'Dark' : 'Light';
+ document.querySelector('meta[name="theme-color"]').content = light ? '#f4f2e9' : '#080f16';
+}
+setTheme(document.documentElement.dataset.theme);
+themeToggle.addEventListener('click', () => {
+ const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+ setTheme(next);
+ try { localStorage.setItem('portfolio-theme', next); } catch {}
+});

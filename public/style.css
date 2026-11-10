@@ -6,3 +6,31 @@
 @media(max-width:700px){.entry-actions{gap:14px}.game-active .world{height:780px;min-height:0;margin:0}.game-active .city{object-position:center 40%;mask-image:linear-gradient(0deg,transparent,#000 30%,#000 85%,#0006)}.game-active .game-hud{top:14px;left:4%;right:4%;padding:12px;display:grid!important;grid-template-columns:1fr 1fr;gap:10px}.player-id{min-width:0;gap:8px}.player-id small{font-size:7px;letter-spacing:.5px}.player-id strong{font-size:20px}.player-icon{width:30px;height:35px;font-size:20px}.xp-block{width:auto;min-width:0;margin:0}.game-hud button{padding:8px;min-height:40px;font-size:10px}.game-active .pin-ai{top:25%;left:35%}.game-active .pin-sourcing{top:40%;left:52%}.game-active .pin-brand{top:43%;left:6%}.game-active .pin-expense{top:55%;left:41%}.game-console{bottom:74px;left:4%;right:4%;flex-direction:column;align-items:stretch;gap:12px;padding:16px}.mission-brief h2{font-size:27px}.mission-brief p{font-size:11px}.mission-brief #game-help{font-size:8px;margin-top:8px}.travel-controls{width:100%;gap:8px}.travel-controls #open-mission{flex:1}.travel-controls button{min-width:45px}.quest-board{padding:25px 6%}.quest-heading{display:block;margin-bottom:15px}.quest-heading>span{display:block;margin-top:9px;font-size:9px}.quest-heading h2{font-size:24px}.inventory{gap:8px}.inventory button{padding:12px 9px;gap:7px;flex-wrap:wrap;min-height:105px}.inventory strong{font-size:10px}.inventory small{font-size:8px}.artifact-icon{font-size:23px;width:22px}.artifact-state{font-size:14px}.quest-bottom{align-items:start}.quest-bottom p{font-size:9px}.quest-bottom button{font-size:9px}#district-complete:not([hidden]){flex-wrap:wrap;padding:18px;gap:12px}.final-badge{font-size:35px}#district-complete h3{font-size:30px}#district-complete a{margin:0}.mission-reward{padding:17px}}
 
 .game-active .pin-expense{top:48%}.pin-number{white-space:nowrap}.game-active .pin-label small{display:none}@media(max-width:700px){.game-active .pin-ai{top:22%;left:30%}.game-active .pin-sourcing{top:33%;left:48%}.game-active .pin-brand{top:35%;left:5%}.game-active .pin-expense{top:44%;left:35%}.game-active .pin-label{font-size:8px;padding:7px 6px}.game-active .pin-number{padding:8px 6px}.game-active .hero-copy{display:none!important}}
+
+/* Theme control and light palette */
+.header-actions{display:flex;align-items:center;gap:10px}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-width:44px;min-height:44px;padding:0 12px;background:transparent;border:1px solid var(--line);font:11px var(--mono);color:var(--ink)}
+.theme-toggle:hover{border-color:var(--cyan);color:var(--cyan)}
+#theme-icon{font:20px/1 system-ui,sans-serif}
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f2e9;--panel:#e7ece5;--ink:#16282a;--muted:#42595d;--line:#a9b9b4;--cyan:#16635a;--amber:#8a5014;--red:#a33831}
+[data-theme="light"] .intro,[data-theme="light"] #case-body .case-summary,[data-theme="light"] #case-body p,[data-theme="light"] #case-body li{color:var(--muted)}
+[data-theme="light"] .primary,[data-theme="light"] .open-arrow,[data-theme="light"] .travel-controls #open-mission,[data-theme="light"] .mission-reward button{background:var(--cyan);color:#fff}
+[data-theme="light"] .primary{box-shadow:4px 4px 0 #a5c0b5}
+[data-theme="light"] .primary:hover,[data-theme="light"] .travel-controls #open-mission:hover,[data-theme="light"] .mission-reward button:hover:not(:disabled){background:#114b46}
+[data-theme="light"] .world:after{background:linear-gradient(0deg,var(--bg),transparent 20%)}
+[data-theme="light"] .pin,[data-theme="light"] .case-no{--cyan:#7ef3e3;--amber:#f5bb63;--red:#ef705b;color:#f3eedf}
+[data-theme="light"] .map-heading{background:#f4f2e9ee;color:var(--ink);padding:9px 11px;border:1px solid var(--line)}
+[data-theme="light"] .world-foot>span{background:var(--bg);color:var(--ink);padding:5px 8px}
+[data-theme="light"] .quest-board,[data-theme="light"] .contact{background:linear-gradient(115deg,#e2ebe1,var(--bg))}
+[data-theme="light"] .inventory button,[data-theme="light"] .game-hud,[data-theme="light"] .game-console,[data-theme="light"] .dialog-toolbar{background:var(--panel);border-color:var(--line);color:var(--ink)}
+[data-theme="light"] .game-hud{box-shadow:4px 4px 0 #25373142}
+[data-theme="light"] .inventory button.collected,[data-theme="light"] .mission-reward{background:#deeee4;border-color:var(--cyan)}
+[data-theme="light"] .artifact-icon,[data-theme="light"] .artifact-state,[data-theme="light"] .mission-brief #game-help{color:var(--muted)}
+[data-theme="light"] .collected .artifact-icon,[data-theme="light"] .collected .artifact-state{color:var(--cyan)}
+[data-theme="light"] .travel-controls button,[data-theme="light"] .case-note{background:var(--panel);border-color:var(--line)}
+[data-theme="light"] #open-mission kbd{color:#fff;border-color:#a0c0b5}
+[data-theme="light"] progress,[data-theme="light"] progress::-webkit-progress-bar{background:#b9cfc4}
+[data-theme="light"] .mission-reward button:disabled{background:#c4dfcf;color:#25473d}
+[data-theme="light"] #district-complete:not([hidden]){background:#f3e6cd}
+[data-theme="light"] .you-label{background:#f5bb63;color:#080f16}
+@media(max-width:700px){.header-actions{gap:0}.topbar{gap:8px}nav{gap:clamp(9px,2.6vw,18px)}.theme-toggle{padding:0;min-width:44px}#theme-label{display:none}}
