@@ -28,11 +28,6 @@ dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog
 function syncHash(){const id=location.hash.replace('#case-','');if(location.hash.startsWith('#case-')&&cases[id])openCase(id,false);else if(dialog.open)closeCase();}
 window.addEventListener('hashchange',syncHash);
 syncHash();
-document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
- document.querySelectorAll('[data-filter]').forEach(other=>{const selected=other===button;other.classList.toggle('selected',selected);other.setAttribute('aria-pressed',String(selected));});
- let count=0;document.querySelectorAll('.project').forEach(project=>{project.hidden=button.dataset.filter!=='all'&&!project.dataset.category.split(' ').includes(button.dataset.filter);if(!project.hidden)count++;});
- document.querySelector('#filter-status').textContent='Showing '+count+' project'+(count===1?'':'s');
-}));
 const motionButton=document.querySelector('#motion');
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionOff=reduced.matches;

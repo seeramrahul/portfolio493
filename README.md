@@ -16,7 +16,7 @@ Open http://localhost:8000. Serve the `public` folder as the website root; openi
 
 - `public/index.html` — portfolio layout and city interface
 - `public/style.css` — responsive styling and motion preferences
-- `public/app.js` — case studies, filtering, dialogs, and contact interactions
+- `public/app.js` — case studies, dialogs, and contact interactions
 - `public/game.js` — travel, missions, collectibles, XP, saved progress, and sound
 - `public/` image and PDF assets — original city artwork, portfolio images, portrait, and résumé
 
@@ -28,7 +28,7 @@ Progress is stored only in the visitor's browser. Sound is off by default. Motio
 
 ## Hosting
 
-The current site is hosted at https://rahul-seeram-the.hatchable.site. At export, Hatchable project `proj_1kbpagEiAUNn` was on version 5 with private visibility.
+The current site is hosted at https://rahul-seeram-the.hatchable.site. At export, Hatchable project `proj_1kbpagEiAUNn` was on version 6 with private visibility.
 
 Any static host can serve the contents of `public/`. No backend, database, API keys, or environment variables are required. Google Fonts are loaded externally, with system-font fallbacks. This repository is a source backup; pushing to GitHub does not automatically update the Hatchable deployment.
 
@@ -42,4 +42,4 @@ The files include Rahul's publicly listed contact email and résumé. No license
 
 ## Verification
 
-The exported website files were checked against Hatchable's SHA-256 file hashes. Browser checks covered all four mission rewards, duplicate-reward prevention, saved progress, restart and undo, keyboard travel, project filtering, and phone layouts at 390px and 320px.
+The exported website files were checked against Hatchable's SHA-256 file hashes. Browser checks covered all four mission rewards, duplicate-reward prevention, saved progress, restart and undo, keyboard travel, and phone layouts at 390px and 320px.
