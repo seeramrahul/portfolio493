@@ -34,3 +34,5 @@
 [data-theme="light"] #district-complete:not([hidden]){background:#f3e6cd}
 [data-theme="light"] .you-label{background:#f5bb63;color:#080f16}
 @media(max-width:700px){.header-actions{gap:0}.topbar{gap:8px}nav{gap:clamp(9px,2.6vw,18px)}.theme-toggle{padding:0;min-width:44px}#theme-label{display:none}}
+
+@media(min-width:701px){[data-theme="light"] body:not(.game-active) .city{mask-image:linear-gradient(90deg,transparent 16%,#000 31%,#000 97%,transparent)}}
